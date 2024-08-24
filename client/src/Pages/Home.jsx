@@ -32,6 +32,8 @@ const AstrologyForm = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
+  API_KEY = ''
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -39,7 +41,7 @@ const AstrologyForm = () => {
       method: 'POST',
       url: 'https://astrologer.p.rapidapi.com/api/v4/relationship-score',
       headers: {
-        'x-rapidapi-key': '6d80b78511mshf9013c277b518dcp1907e1jsn42e7ccd28a2e',
+        'x-rapidapi-key': API_KEY,
         'x-rapidapi-host': 'astrologer.p.rapidapi.com',
         'Content-Type': 'application/json'
       },
